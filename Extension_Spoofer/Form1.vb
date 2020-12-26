@@ -11,10 +11,10 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim RChar As String = ChrW("&H202E")
-        Dim Name As String = TextBox2.Text & RChar & StrReverse(TextBox3.Text) & ".exe"
+        Dim _RChar As String = ChrW("&H202E")
+        Dim _Name As String = TextBox2.Text & _RChar & StrReverse(TextBox3.Text) & ".exe"
 
-        My.Computer.FileSystem.RenameFile(TextBox1.Text, Name)
+        My.Computer.FileSystem.RenameFile(TextBox1.Text, _Name)
     End Sub
 
 End Class
