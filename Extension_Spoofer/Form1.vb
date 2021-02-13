@@ -4,9 +4,10 @@
 
         Using _Open_File_Dialog As OpenFileDialog = New OpenFileDialog()
             _Open_File_Dialog.Filter = "Executable files (*.exe)|*.exe"
-            _Open_File_Dialog.ShowDialog()
 
-            TextBox1.Text = _Open_File_Dialog.FileName
+            If _Open_File_Dialog.ShowDialog().Equals(DialogResult.OK) Then
+                TextBox1.Text = _Open_File_Dialog.FileName
+            End If
         End Using
     End Sub
 
